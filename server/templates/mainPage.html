@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<title>Web application</title>
+		<script type="text/javascript" src="../static/js/jquery.js"> </script>
+		<script type="text/javascript" src="../static/js/code.js"> </script>
+		<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/socket.io/1.3.6/socket.io.min.js"></script>
+	</head>
+	
+	<body>
+
+		<h1> User: {{ user_id}} / Building: <div id="building"> </div> </h1>
+		<input type="hidden" id="user_id" value={{ user_id }} />
+		<input type="hidden" id="token" value={{ token }} />
+		
+		<p> Manual: <input type="checkbox" id="manual_checkbox" onClick="change_manual_state()" /> </p>
+		
+		<p> 
+			Latitude: <input type="number" step="any" id="latitude" disabled="disabled" />
+			Longitude: <input type="number" step="any" id="longitude" disabled="disabled" />
+			<input type="submit" value="Send coordinates" id="send_coordinates" onClick="update_coordinates()" disabled="disabled" />
+		</p>
+		
+		<p>			
+			Range : <input type="number" id="range" value={{ radious}} />
+			<input type="submit" value="Update range" id="update_range" onClick="update_range()" />
+		</p>
+		
+		<style> .align_label * {
+				  vertical-align: middle;
+				}
+		</style>
+		
+		<p class="align_label">
+		  <label for="users_building"> Users in same building: </label>
+		  <textarea style="resize:none" rows="4" cols="25" id="users_building" readonly> </textarea>
+		  <label for="users_range"> Users in range: </label>
+		  <textarea style="resize:none" rows="4" cols="25" id="users_range" readonly> </textarea>
+		</p>
+		
+		<p class="align_label">
+		  <label for="messages_received"> Messages received: </label>
+		  <textarea style="resize:none" rows="10" cols="90" id="messages_received" readonly> </textarea>
+		</p>
+		
+		<p class="align_label">
+		  <label for="send_message"> Message to users: </label>
+		  <textarea style="resize:none" rows="4" cols="50" id="message"> </textarea>
+		  <input type="submit" value="Send message" id="send_message" onClick="send_message()" />
+		</p>
+		
+	</body>
+</html>
