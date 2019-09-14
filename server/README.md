@@ -60,7 +60,7 @@ The following table shows the routes of the REST API developed for the communica
 
 ## Fenix authentication
 
-This system is supposed to be used by IST users. Hence, they need to login using their Fenix credentials. The programmer of the system must create an application on its own Fenix account, following [this instructions](http://fenixedu.org/dev/tutorials/use-fenixedu-api-in-your-application/). After that, the Fenix API will two keys: client_id and client_secret, which must be inserted in the setup.ini file. Also, the redirect_uri field of that file must be updated to the URL the browser will redirect after logging in into Fenix (in this case, it must be the URL of your server).
+This system is supposed to be used by IST users. Hence, they need to login using their Fenix credentials. The programmer of the system must create an application on its own Fenix account, following [this instructions](http://fenixedu.org/dev/tutorials/use-fenixedu-api-in-your-application/). After that, the Fenix API will create two keys: client_id and client_secret, which must be inserted in the setup.ini file. Also, the redirect_uri field of that file must be updated to the URL the browser will redirect after logging in into Fenix (in this case, it must be the URL of your server with the path login/).
 
 ## Instructions summary
 
@@ -69,7 +69,7 @@ This system is supposed to be used by IST users. Hence, they need to login using
 git clone https://github.com/dgarigali/RealtimeMessageExchange
 ```
 
-2) Go to the [Fenix](https://fenix.tecnico.ulisboa.pt), follow [this instructions](http://fenixedu.org/dev/tutorials/use-fenixedu-api-in-your-application/) and update the client_id, client_secret and redirect_uri fields on the setup.ini file.
+2) Go to [Fenix](https://fenix.tecnico.ulisboa.pt), follow [this instructions](http://fenixedu.org/dev/tutorials/use-fenixedu-api-in-your-application/) and update the client_id, client_secret and redirect_uri fields on the setup.ini file.
 
 3) Create database on MySQL server using the db.sql file. Open the credentials.json file and insert the user and password of the MySQL server. 
 
@@ -91,6 +91,6 @@ gunicorn -b 0.0.0.0:3002 --worker-class eventlet app:app
 
 The web app is supossed to be used by the regular users. It has the following funcionalities: Fenix authentication, user identification and location, sending user location to server (automatic by the browser geolocation function or manually by the user), define range (from which it can find other users), listing all users in same building and in range, sending messages to users nearby and receive messages from other users and bots.
 
-For acessing the client application, open any browser and type the url of your server in the following format: http://hostname:3002/. It will redirect to the Fenix authentication page and, after successfully authenticating, it will redirect the a page looking like this: 
+For acessing the client application, open any browser and type the url of your server in the following format: http://hostname:3002/. It will redirect to the Fenix authentication page and, after successfully authenticating, it will redirect to a page looking like this: 
 
 ![Screenshot](../images/app.png)
