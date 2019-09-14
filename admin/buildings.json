@@ -1,0 +1,7 @@
+{"type" : "CAMPUS", "id" : "2448131360897", "name" : "Alameda", "containedSpaces" : [ 
+	{"id" : "2448131361042", "name" : "Pavilhão de Civil", "latitude" : 38.7374427, "longitude" : -9.1401387, "range": 54}, 
+	{"id" : "2448131361155", "name" : "Pavilhão de Mecânica III", "latitude" : 38.73739668, "longitude" : -9.1372419, "range": 43}, 
+	{"id" : "2448131361091", "name" : "Torre Norte", "latitude" : 38.73778075548429, "longitude" : -9.138573236485627, "range": 49},
+	{"id" : "2448131361109", "name" : "Pavilhão de Química", "latitude": 38.7360242, "longitude" : -9.13840063, "range": 43},
+	{"id" : "2448131361155", "name" : "INESC", "latitude": 38.736604799999995, "longitude" : -9.1407007, "range": 43}]
+}
