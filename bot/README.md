@@ -19,7 +19,7 @@ The possible commands are:
 | Help             |                        python3 bot.py -h                |
 | Verification     |                python3 bot.py -b <BOT_NAME> -s          |
 | Register         |                python3 bot.py -b <BOT_NAME> -r          |  
-| Execution        | python3 bot.py -b <BOT_NAME> -m <MESSAGE> -i <INTERVAL> |
+| Execution        | python3 bot.py -b <BOT_NAME> -m <BOT_MESSAGE> -i <BOT_INTERVAL> |
 
 ## REST API
 
