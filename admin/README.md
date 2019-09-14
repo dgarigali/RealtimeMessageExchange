@@ -45,7 +45,7 @@ pip3 install requests
 sudo apt-get install python3-tk
 ```
 
-3) Update params.json file with the hostname of the your server
+3) Update params.json file with the hostname of your server
 
 4) Run the application:
 ```
